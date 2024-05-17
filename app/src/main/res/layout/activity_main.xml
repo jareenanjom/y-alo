@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ক্যালেন্ডার"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <RadioGroup
+        android:id="@+id/viewSwitcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <RadioButton
+            android:id="@+id/monthlyView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="মাসিক"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/yearlyView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="বার্ষিক" />
+    </RadioGroup>
+
+    <GridLayout
+        android:id="@+id/calendarGrid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/viewSwitcher"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:columnCount="7"
+        android:rowCount="6"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <!-- Days of the week -->
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="রবি" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="সোম" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="মঙ্গল" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="বুধ" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="বৃহঃ" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="শুক্র" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="শনি" />
+
+        <!-- May 2024 Dates -->
+        <!-- The first day of May 2024 is on a Wednesday -->
+        <!-- Empty TextViews for padding -->
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" />
+
+        <!-- First week of May -->
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="১" android:background="@color/pmsColor" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="২" android:background="@color/pmsColor" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="৩" android:background="@color/pmsColor" />
+
+        <!-- Second week of May -->
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="৪" android:background="@color/pmsColor" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="৫" android:background="@color/pmsColor" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="৬" android:background="@color/pmsColor" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="৭" android:background="@color/pmsColor" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="৮" android:background="@color/periodColor" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="৯" android:background="@color/periodColor" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="১০" android:background="@color/periodColor" />
+
+        <!-- Third week of May -->
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="১১" android:background="@color/periodColor" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="১২" android:background="@color/periodColor" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="১৩" android:background="@color/periodColor" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="১৪" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="১৫" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="১৬" android:background="@color/ovulationColor" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="১৭" android:background="@color/ovulationColor" />
+
+        <!-- Fourth week of May -->
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="১৮" android:background="@color/ovulationColor" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="১৯" android:background="@color/ovulationColor" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="২০" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="২১" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="২২" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="২৩" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="২৪" />
+
+        <!-- Fifth week of May -->
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="২৫" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="২৬" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="২৭" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="২৮" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="২৯" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="৩০" android:background="@color/ovulationColor" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:text="৩১" android:background="@color/ovulationColor" />
+    </GridLayout>
+
+    <!-- Legend -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/pmsColor"
+            android:text="PMS"
+            android:padding="4dp"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/periodColor"
+            android:text="পিরিয়ড"
+            android:padding="4dp"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/ovulationColor"
+            android:text="অভুলেশন"
+            android:padding="4dp"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
