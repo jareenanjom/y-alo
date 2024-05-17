@@ -8,9 +8,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="pmsColor">#add8e6</color> <!-- Light Blue -->
-
+    <color name="bg">#dbcdf0</color>
+    <color name="lightpink">#f2c6de</color>
+    <color name="beige">#f7d9c4</color>
     <!-- Period Color -->
-    <color name="periodColor">#ff69b4</color> <!-- Pink -->
+    <color name="periodColor">#ff69b4</color>
+    <!-- Pink -->
 
     <!-- Ovulation Color -->
     <color name="ovulationColor">#dda0dd</color> <!-- Light Purple -->
